@@ -8,7 +8,7 @@ class PostsController < ApplicationController
       flash[:success] = '投稿が完了しました'
       redirect_to root_url
     else
-      @posts = current_user.posts.order('created_at DESC').page(params[:page])
+      @posts = current_user.feed_posts.order('created_at DESC').page(params[:page])
       flash.now[:danger] = '投稿が失敗しました'
       render 'toppages/index'
     end
