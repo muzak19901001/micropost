@@ -9,6 +9,8 @@
       </div>
     </div>
     <%= render 'relationships/follow_button', user: @user %>
+    <br>
+    <%= link_to 'お気に入り一覧', likes_user_path(@user), class: 'btn btn-primary btn-block' %>
    </aside>
   <div class="col-xs-8">
     <ul class="nav nav-tabs nav-justified">
